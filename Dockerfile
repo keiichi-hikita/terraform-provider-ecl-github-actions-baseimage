@@ -9,8 +9,8 @@ ENV PROVIDER_ZIP="https://github.com/nttcom/terraform-provider-ecl/releases/down
 
 RUN cd /; \
     wget ${PROVIDER_ZIP}; \
-    unzip terraform-provider-ecl_${TF_ECL_PROVIDER_VERSION}_${OS}_amd64.zip; \
-    rm terraform-provider-ecl_${TF_ECL_PROVIDER_VERSION}_${OS}_amd64.zip;\
+    unzip terraform-provider-ecl_${TF_ECL_PROVIDER_VERSION}_${OS_TYPE}_amd64.zip; \
+    rm terraform-provider-ecl_${TF_ECL_PROVIDER_VERSION}_${OS_TYPE}_amd64.zip;\
     mv terraform-provider-ecl* terraform-provider-ecl
 
 COPY entrypoint.sh /entrypoint.sh
